@@ -8,6 +8,8 @@ from pages.page_registro import PageRegistro
 from pages.page_cuenta_creada import PageCuentaCreada
 from pages.page_cuenta_borrada import PageCuentaBorrada
 from pages.page_contacto import PageContacto
+from pages.page_test_cases import PageTestCases
+
 
 class TestBase:
 
@@ -21,6 +23,8 @@ class TestBase:
     page_cuenta_creada: PageCuentaCreada
     page_cuenta_borrada: PageCuentaBorrada
     page_contacto: PageContacto
+    page_test_cases: PageTestCases
+
 
 
     ''' Esta función está incluída en self.check_and_close_publi(). Uncomment para usarla adicionalmente si es preciso.
@@ -48,6 +52,8 @@ class TestBase:
         request.cls.page_cuenta_creada = PageCuentaCreada(driver)
         request.cls.page_cuenta_borrada = PageCuentaBorrada(driver)
         request.cls.page_contacto = PageContacto(driver)
+        request.cls.page_test_cases = PageTestCases(driver)
+
 
 
     def registrar_cuenta(self):

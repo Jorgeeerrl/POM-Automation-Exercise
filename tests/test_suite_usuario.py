@@ -1,9 +1,10 @@
 import allure
 from .test_base import TestBase
 
-
+@allure.feature("Funcionalidad Login-Registro")
 class TestSuiteLoginRegistro(TestBase):
 
+    @allure.story("Registro de Usuario")
     @allure.tag('Test Case: 1')
     @allure.title("Register User")
     def test_registro_correcto(self):
@@ -30,6 +31,7 @@ class TestSuiteLoginRegistro(TestBase):
         self.page_cuenta_borrada.click_boton_continue()
         self.page_home.pagina_abierta()
 
+    @allure.story("Login Usuario")
     @allure.tag('Test Case: 2')
     @allure.title("Login User with correct email and password")
     def test_login_correcto(self):
@@ -46,6 +48,7 @@ class TestSuiteLoginRegistro(TestBase):
 
         self.borrar_cuenta()
 
+    @allure.story("Login Usuario")
     @allure.tag('Test Case: 3')
     @allure.title("Login User with incorrect email and password")
     def test_login_incorrecto(self):
@@ -57,6 +60,7 @@ class TestSuiteLoginRegistro(TestBase):
         self.page_login_registro.click_boton_login()
         self.page_login_registro.error_email_password_invalidos_visible()
 
+    @allure.story("Login Usuario")
     @allure.tag('Test Case: 4')
     @allure.title("Logout User")
     def test_logout(self):
@@ -68,6 +72,7 @@ class TestSuiteLoginRegistro(TestBase):
         self.login_cuenta()
         self.borrar_cuenta()
 
+    @allure.story("Registro de Usuario")
     @allure.tag('Test Case: 5')
     @allure.title("Register User with existing email")
     def test_registro_email_existente(self):

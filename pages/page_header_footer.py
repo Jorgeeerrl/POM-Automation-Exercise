@@ -97,3 +97,8 @@ class PageHeaderFooter():
     def click_boton_test_cases(self):
         self.wait.until(EC.element_to_be_clickable(self.BOTON_TEST_CASES_HEADER)).click()
         self.check_and_close_publi()
+
+    @allure.step("Click Botón Products")
+    def click_boton_products(self):
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_PRODUCTS_HEADER)).click()
+        self.check_and_close_publi()

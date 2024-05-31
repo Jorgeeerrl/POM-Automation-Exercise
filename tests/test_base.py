@@ -1,5 +1,4 @@
 import pytest
-
 from utils.generador_datos import Datos
 
 from pages.page_home import PageHome
@@ -9,6 +8,9 @@ from pages.page_cuenta_creada import PageCuentaCreada
 from pages.page_cuenta_borrada import PageCuentaBorrada
 from pages.page_contacto import PageContacto
 from pages.page_test_cases import PageTestCases
+from pages.page_productos import PageProductos
+from pages.page_detalles_producto import PageDetallesProducto
+
 
 
 class TestBase:
@@ -24,6 +26,8 @@ class TestBase:
     page_cuenta_borrada: PageCuentaBorrada
     page_contacto: PageContacto
     page_test_cases: PageTestCases
+    page_productos: PageProductos
+    page_detalles_producto: PageDetallesProducto
 
 
 
@@ -53,7 +57,8 @@ class TestBase:
         request.cls.page_cuenta_borrada = PageCuentaBorrada(driver)
         request.cls.page_contacto = PageContacto(driver)
         request.cls.page_test_cases = PageTestCases(driver)
-
+        request.cls.page_productos = PageProductos(driver)
+        request.cls.page_detalles_producto = PageDetallesProducto(driver)
 
 
     def registrar_cuenta(self):

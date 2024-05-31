@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class PageTestCases(PageBase):
+
     PAGE_URL = Urls.PAGE_TEST_CASES
 
     TEST_CASES = ("css selector", ".panel-group h4")

@@ -81,3 +81,14 @@ class PageHeaderFooter():
     def click_boton_logout(self):
         self.wait.until(EC.element_to_be_clickable(self.BOTON_LOGOUT_HEADER)).click()
         self.check_and_close_publi()
+
+    @allure.step("Header Visible")
+    def header_visible(self):
+        if "#google_vignette" in self.driver.current_url:
+            self.check_and_close_publi()
+        self.wait.until(EC.visibility_of_element_located(self.HEADER))
+
+    @allure.step("Click Botón Contact Us")
+    def click_boton_contacto(self):
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_CONTACTO_HEADER)).click()
+        self.check_and_close_publi()

@@ -25,6 +25,10 @@ class PageHeaderFooter():
     USERNAME_FIELD = ("xpath", "//input[@name='username']")
     SUBS_MENSAJE_OK = ('css selector', '#success-subscribe')
 
+    MODAL_CONTINUE_SHOPPING_BTTN = ("css selector", "#cartModal .btn")
+    PRODUCT_ADDED_MODAL = ("css selector", "#cartModal .modal-content")
+    MODAL_VIEW_CART_BTTN = ("css selector", "#cartModal [href='/view_cart']")
+
     iFRAME_PUBLI = ('xpath', '//*[@id="ad_iframe"]')
     FULL_FRAME_PUBLI = ('xpath', '//div[@id="ad_position_box"]')
     BOTON_CERRAR_PUBLI = ('css selector', 'div#dismiss-button')
@@ -132,4 +136,23 @@ class PageHeaderFooter():
     @allure.step("Click Botón Cart")
     def click_boton_cart(self):
         self.wait.until(EC.element_to_be_clickable(self.BOTON_CART_HEADER)).click()
+        self.check_and_close_publi()
+
+    @allure.step("Click Botón Continue Shopping")
+    def click_boton_continue_shopping(self):
+        self.modal_añadido_visible()
+        self.wait.until(EC.element_to_be_clickable(self.MODAL_CONTINUE_SHOPPING_BTTN)).click()
+
+    @allure.step("Modal Producto Añadido Visible")
+    def modal_añadido_visible(self):
+        self.wait.until(EC.visibility_of_element_located(self.PRODUCT_ADDED_MODAL))
+        self.wait.until(EC.visibility_of_element_located(self.MODAL_VIEW_CART_BTTN))
+        self.wait.until(EC.visibility_of_element_located(self.MODAL_CONTINUE_SHOPPING_BTTN))
+        self.wait.until(EC.element_to_be_clickable(self.MODAL_VIEW_CART_BTTN))
+        self.wait.until(EC.element_to_be_clickable(self.MODAL_CONTINUE_SHOPPING_BTTN))
+
+    @allure.step("Click Botón Ver Carrito")
+    def click_boton_view_cart(self):
+        self.modal_añadido_visible()
+        self.wait.until(EC.element_to_be_clickable(self.MODAL_VIEW_CART_BTTN)).click()
         self.check_and_close_publi()

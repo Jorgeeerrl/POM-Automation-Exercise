@@ -41,3 +41,15 @@ class PageProductos(PageBase):
         self.wait.until(EC.visibility_of_element_located(self.PANEL_IZQUIERDO))
         self.wait.until(EC.visibility_of_element_located(self.CONTENEDOR_PRODUCTOS))
         self.screenshot("Productos Buscados")
+
+    @allure.step("Añadir producto: {nombre_producto} al carrito")
+    def add_product_to_cart_by_name(self, nombre_producto):
+        locator_nombre_producto = ("xpath", f"(//p[text()='{nombre_producto}'])[1]")
+        locator_precio_producto = ("xpath", f"//p[text()='{nombre_producto}']/preceding-sibling::h2")
+        locator_add_cart = ("xpath", f"(//p[text()='{nombre_producto}']/following-sibling::a[@class='btn btn-default add-to-cart'])[2]")
+        self.wait.until(EC.visibility_of_element_located(locator_nombre_producto))
+        self.wait.until(EC.visibility_of_element_located(locator_precio_producto))
+        self.scroll_into_view(locator_nombre_producto)
+        self.hover(locator_nombre_producto)
+        self.wait.until(EC.presence_of_element_located(locator_add_cart)).click()
+        self.check_and_close_publi()

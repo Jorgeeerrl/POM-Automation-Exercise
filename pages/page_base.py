@@ -93,3 +93,13 @@ class PageBase(PageHeaderFooter):
     def scroll_abajo(self):
         actions = ActionChains(self.driver)
         actions.send_keys(Keys.END).perform()
+
+    @allure.step("Mover puntero sobre el elemento")
+    def hover(self, locator_elemento):
+        elemento = self.wait.until(EC.presence_of_element_located(locator_elemento))
+        actions = ActionChains(self.driver)
+        actions.move_to_element(elemento).perform()
+
+    def capturar_texto_elementos(self, locator):
+        elementos = self.wait.until(EC.presence_of_all_elements_located(locator))
+        return [element.text for element in elementos]

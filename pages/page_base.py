@@ -2,6 +2,7 @@ import allure
 from allure_commons.types import AttachmentType
 from faker import Faker
 from selenium.common import NoSuchElementException
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.ui import Select
@@ -87,3 +88,8 @@ class PageBase(PageHeaderFooter):
     def scroll_into_view(self, locator_elemento):
         elemento = self.wait.until(EC.presence_of_element_located(locator_elemento))
         self.driver.execute_script("arguments[0].scrollIntoView();", elemento)
+
+    @allure.step("Scroll abajo hasta el final")
+    def scroll_abajo(self):
+        actions = ActionChains(self.driver)
+        actions.send_keys(Keys.END).perform()

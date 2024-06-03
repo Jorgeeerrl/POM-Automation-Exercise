@@ -10,6 +10,8 @@ from pages.page_contacto import PageContacto
 from pages.page_test_cases import PageTestCases
 from pages.page_productos import PageProductos
 from pages.page_detalles_producto import PageDetallesProducto
+from pages.page_carrito import PageCarrito
+
 
 
 
@@ -28,6 +30,8 @@ class TestBase:
     page_test_cases: PageTestCases
     page_productos: PageProductos
     page_detalles_producto: PageDetallesProducto
+    page_carrito: PageCarrito
+
 
 
 
@@ -59,6 +63,8 @@ class TestBase:
         request.cls.page_test_cases = PageTestCases(driver)
         request.cls.page_productos = PageProductos(driver)
         request.cls.page_detalles_producto = PageDetallesProducto(driver)
+        request.cls.page_carrito = PageCarrito(driver)
+
 
 
     def registrar_cuenta(self):

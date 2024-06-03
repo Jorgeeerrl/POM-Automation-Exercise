@@ -19,6 +19,11 @@ class PageHeaderFooter():
     HEADER = ("css selector", ".nav.navbar-nav")
     USERNAME_FIELD = ("xpath", "//input[@name='username']")
     USER_STATUS = ('xpath', '//a[contains(text(), "Logged in as")]')
+    SUBS_TEXT = ('xpath', "//h2[contains(.,'Subscription')]")
+    BOTON_SUBS = ('id', 'subscribe')
+    SUBS_EMAIL_FIELD = ('id', 'susbscribe_email')
+    USERNAME_FIELD = ("xpath", "//input[@name='username']")
+    SUBS_MENSAJE_OK = ('css selector', '#success-subscribe')
 
     iFRAME_PUBLI = ('xpath', '//*[@id="ad_iframe"]')
     FULL_FRAME_PUBLI = ('xpath', '//div[@id="ad_position_box"]')
@@ -61,6 +66,7 @@ class PageHeaderFooter():
         except TimeoutException:
             return("No se encontró el pop-up de cookies.")
 
+
     @allure.step("Click Botón Signup/Login")
     def click_boton_login_registro(self):
         self.wait.until(EC.element_to_be_clickable(self.BOTON_REGISTRO_LOGIN_HEADER)).click()
@@ -101,4 +107,29 @@ class PageHeaderFooter():
     @allure.step("Click Botón Products")
     def click_boton_products(self):
         self.wait.until(EC.element_to_be_clickable(self.BOTON_PRODUCTS_HEADER)).click()
+        self.check_and_close_publi()
+
+    @allure.step("'SUBSCRIPTION' Visible")
+    def subscription_visible(self):
+        self.wait.until(EC.visibility_of_element_located(self.SUBS_TEXT))
+        self.wait.until(EC.visibility_of_element_located(self.BOTON_SUBS))
+        self.wait.until(EC.visibility_of_element_located(self.SUBS_EMAIL_FIELD))
+
+    @allure.step("Rellenar email en Subscription")
+    def rellenar_email_subscription(self):
+        self.rellenar(self.SUBS_EMAIL_FIELD, self.fake.email())
+
+    @allure.step("Click Botón Subscribe")
+    def click_boton_subscribe(self):
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_SUBS)).click()
+        self.check_and_close_publi()
+
+    @allure.step("Mensaje 'Success Subscription' Visible")
+    def mensaje_subscription_ok_visible(self):
+        self.wait.until(EC.visibility_of_element_located(self.SUBS_MENSAJE_OK))
+        self.screenshot("Mensaje 'Success Subscription'")
+
+    @allure.step("Click Botón Cart")
+    def click_boton_cart(self):
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_CART_HEADER)).click()
         self.check_and_close_publi()

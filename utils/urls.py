@@ -12,3 +12,5 @@ class Urls:
     PAGE_CONTACTO = f"{HOST}contact_us"
     PAGE_TEST_CASES = f"{HOST}test_cases"
     PAGE_PRODUCTOS = f"{HOST}products"
+    PAGE_CARRITO = f"{HOST}view_cart"
+

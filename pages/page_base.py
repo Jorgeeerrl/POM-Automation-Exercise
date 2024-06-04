@@ -103,3 +103,7 @@ class PageBase(PageHeaderFooter):
     def capturar_texto_elementos(self, locator):
         elementos = self.wait.until(EC.presence_of_all_elements_located(locator))
         return [element.text for element in elementos]
+
+    def capturar_texto_elemento(self, locator):
+        elemento = self.wait.until(EC.presence_of_element_located(locator))
+        return elemento.text

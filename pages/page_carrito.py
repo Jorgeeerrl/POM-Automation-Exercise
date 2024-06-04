@@ -13,6 +13,10 @@ class PageCarrito(PageBase):
     PRECIO_TOTAL_CARRITO = ("xpath", "//p[contains(@class, 'cart_total_price')]")  # ver la posibilidad de eliminarlo
     CARRITO_VACIO = ("css selector", "#empty_cart")
     NOMBRES_PRODUCTOS_CARRITO = ("xpath", "//td[contains(@class, 'cart_description')]//a")
+    MODAL_CHECKOUT = ("css selector", "#checkoutModal .modal-content")
+    BOTON_MODAL_LOG_REG = ("css selector", "#checkoutModal [href='/login']")
+    BOTON_MODAL_CONTINUAR = ("css selector", "#checkoutModal .btn-success")
+    BOTON_CHECKOUT = ("css selector", "a[class='btn btn-default check_out']")
 
 
     @allure.step("Productos presentes en carrito")
@@ -55,3 +59,21 @@ class PageCarrito(PageBase):
         with allure.step(f"Verificar que la cantidad es correcta"):
             assert cantidades == cantidad, f"Esperado: {cantidad}, Actual: {cantidades}"
         self.screenshot("Cantidad del Producto")
+
+    @allure.step("Modal checkout pop up visible")
+    def modal_checkout_visible(self):
+        self.wait.until(EC.visibility_of_element_located(self.MODAL_CHECKOUT))
+        self.wait.until(EC.visibility_of_element_located(self.BOTON_MODAL_LOG_REG))
+        self.wait.until(EC.visibility_of_element_located(self.BOTON_MODAL_CONTINUAR))
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_MODAL_LOG_REG))
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_MODAL_CONTINUAR))
+
+    @allure.step("Click botón 'Login/Registro'")
+    def click_boton_log_reg(self):
+        self.modal_checkout_visible()
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_MODAL_LOG_REG)).click()
+
+    @allure.step("Click botón 'Proceed To Checkout'")
+    def click_boton_proceed(self):
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_CHECKOUT)).click()
+        self.check_and_close_publi()

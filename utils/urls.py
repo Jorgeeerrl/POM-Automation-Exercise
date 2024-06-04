@@ -13,4 +13,6 @@ class Urls:
     PAGE_TEST_CASES = f"{HOST}test_cases"
     PAGE_PRODUCTOS = f"{HOST}products"
     PAGE_CARRITO = f"{HOST}view_cart"
+    PAGE_CHECKOUT = f"{HOST}checkout"
+    PAGE_PAGO = f"{HOST}payment"
 

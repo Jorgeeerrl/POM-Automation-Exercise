@@ -11,8 +11,9 @@ from pages.page_test_cases import PageTestCases
 from pages.page_productos import PageProductos
 from pages.page_detalles_producto import PageDetallesProducto
 from pages.page_carrito import PageCarrito
-
-
+from pages.page_checkout import PageCheckout
+from pages.page_pago import PagePago
+from pages.page_envio import PageEnvio
 
 
 class TestBase:
@@ -31,8 +32,9 @@ class TestBase:
     page_productos: PageProductos
     page_detalles_producto: PageDetallesProducto
     page_carrito: PageCarrito
-
-
+    page_checkout: PageCheckout
+    page_pago: PagePago
+    page_envio: PageEnvio
 
 
     ''' Esta función está incluída en self.check_and_close_publi(). Uncomment para usarla adicionalmente si es preciso.
@@ -64,7 +66,9 @@ class TestBase:
         request.cls.page_productos = PageProductos(driver)
         request.cls.page_detalles_producto = PageDetallesProducto(driver)
         request.cls.page_carrito = PageCarrito(driver)
-
+        request.cls.page_checkout = PageCheckout(driver)
+        request.cls.page_pago = PagePago(driver)
+        request.cls.page_envio = PageEnvio(driver)
 
 
     def registrar_cuenta(self):

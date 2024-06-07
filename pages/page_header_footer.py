@@ -22,7 +22,6 @@ class PageHeaderFooter():
     SUBS_TEXT = ('xpath', "//h2[contains(.,'Subscription')]")
     BOTON_SUBS = ('id', 'subscribe')
     SUBS_EMAIL_FIELD = ('id', 'susbscribe_email')
-    USERNAME_FIELD = ("xpath", "//input[@name='username']")
     SUBS_MENSAJE_OK = ('css selector', '#success-subscribe')
 
     MODAL_CONTINUE_SHOPPING_BTTN = ("css selector", "#cartModal .btn")
@@ -155,4 +154,9 @@ class PageHeaderFooter():
     def click_boton_view_cart(self):
         self.modal_añadido_visible()
         self.wait.until(EC.element_to_be_clickable(self.MODAL_VIEW_CART_BTTN)).click()
+        self.check_and_close_publi()
+
+    @allure.step("Click Botón Home")
+    def click_boton_home(self):
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_HOME_HEADER)).click()
         self.check_and_close_publi()

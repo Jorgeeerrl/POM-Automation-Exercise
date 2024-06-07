@@ -77,3 +77,14 @@ class PageCarrito(PageBase):
     def click_boton_proceed(self):
         self.wait.until(EC.element_to_be_clickable(self.BOTON_CHECKOUT)).click()
         self.check_and_close_publi()
+
+    @allure.step("Borrar primer producto del carrito")
+    def borrar_primer_producto(self):
+        self.carrito_NO_vacio()
+        boton_delete_locator = ("xpath", "//a[@class='cart_quantity_delete'][1]")
+        boton_delete = self.wait.until(EC.element_to_be_clickable(boton_delete_locator))
+        boton_delete.click()
+
+        nombre_producto = self.get_nombres_productos_carrito()[0]
+        boton_delete.click()
+        allure.attach(f"Producto borrado: {nombre_producto}", name="Producto Borrado")

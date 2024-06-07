@@ -7,10 +7,11 @@ Este proyecto es una suite de pruebas automatizadas basada en el patrón de dise
 
 ## Características Destacables
 
-- **Diseño basado en Page Object Model (POM)**: Cada página web está representada por una clase que encapsula sus elementos e interacciones.
-- **Cobertura de Pruebas Integral**: Incluye pruebas para acciones de usuario, gestión de productos, proceso de pago, y más.
-- **Generación de Datos**: Utiliza utilidades para la generación de datos de prueba.
+- **Diseño basado en Page Object Model (POM)**: Cada página web está representada por una clase que encapsula sus elementos e interacciones. De esta manera logramos un código más limpio, así como una buena reutilización y un mejor mantenimiento del mismo.
+- **Cobertura de Pruebas Integral**: Incluye pruebas para acciones de usuario, gestión de productos, proceso de pago, y diversas funcionalidades del sitio.
+- **Generación de Datos**: Utiliza un generador de datos de prueba que usa la librería Fake bajo un Patrón Singleton asegurando que sólo haya una instancia de la clase Datos durante la ejecución.
 - **Configuración y Utilidades**: Archivos de configuración y utilidades adicionales para facilitar las pruebas.
+- **Resultados de Test**: Utiliza Allure para mostrar y guardar los resultados de las pruebas, con pasos y marcadores según los principales Funcionalidades e Historias de Usuario relacionadas.
 
 ## Estructura del Proyecto
 

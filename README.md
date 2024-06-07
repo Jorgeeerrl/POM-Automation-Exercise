@@ -1,3 +1,4 @@
+<img align="center" src="https://www.automationexercise.com/static/images/home/logo.png" width="450" />
 
 # POM Automation Exercise
 

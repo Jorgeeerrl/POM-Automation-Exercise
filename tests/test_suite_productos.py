@@ -180,3 +180,18 @@ class TestSuiteGestionProductos(TestBase):
         self.page_home.click_boton_view_cart()
         self.page_carrito.pagina_abierta()
         self.page_carrito.carrito_NO_vacio()
+
+    @allure.story("Gestión del Carrito")
+    @allure.tag('Test Case: 27')
+    @allure.title("Remove All Products From Cart")
+    def test_verificar_carrito_vacio(self):
+        self.page_home.abrir_pagina()
+        self.page_home.pagina_abierta()
+        self.page_home.click_boton_products()
+        self.page_productos.pagina_abierta()
+        self.page_productos.add_product_to_cart_by_name('Blue Top')
+        self.page_productos.click_boton_view_cart()
+        self.page_carrito.pagina_abierta()
+        self.page_carrito.productos_presentes_carrito('Blue Top')
+        self.page_carrito.borrar_primer_producto()
+        self.page_carrito.carrito_vacio()

@@ -9,6 +9,8 @@ class PageHome(PageBase):
 
     SLIDER_PRODUCTOS_RECOMENDADOS = ("css selector", ".recommended_items")
     BOTON_ADD_CART_PRIMER_RECOMENDADO_ACTIVO = ("xpath", "(//*[@id='recommended-item-carousel']//*[contains(@class, 'active')]//*[contains(@class, 'add-to-cart')])[1]")
+    BOTON_SCROLL_UP = ('css selector', '#scrollUp')
+    TEXTO_SLIDER_PRINCIPAL = ("xpath", "//div[@class = 'item active']//h2[contains(text(), 'Full-Fledged practice website for Automation Engineers')]")
 
 
     @allure.step("Click botón 'View product' by ID")
@@ -29,3 +31,13 @@ class PageHome(PageBase):
         self.wait.until(EC.visibility_of_element_located(self.BOTON_ADD_CART_PRIMER_RECOMENDADO_ACTIVO))
         self.wait.until(EC.element_to_be_clickable(self.BOTON_ADD_CART_PRIMER_RECOMENDADO_ACTIVO)).click()
         self.check_and_close_publi()
+
+    @allure.step("Click Botón Arriba")
+    def click_boton_arriba(self):
+        self.wait.until(EC.visibility_of_element_located(self.BOTON_SCROLL_UP))
+        self.wait.until(EC.element_to_be_clickable(self.BOTON_SCROLL_UP)).click()
+
+    @allure.step("Texto 'Full-Fledged practice website...' visible en el slider")
+    def texto_slider_principal_visible(self):
+        self.wait.until(EC.visibility_of_element_located(self.TEXTO_SLIDER_PRINCIPAL))
+        self.wait.until(EC.element_to_be_clickable(self.TEXTO_SLIDER_PRINCIPAL))

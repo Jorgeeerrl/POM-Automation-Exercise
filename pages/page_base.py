@@ -107,3 +107,8 @@ class PageBase(PageHeaderFooter):
     def capturar_texto_elemento(self, locator):
         elemento = self.wait.until(EC.presence_of_element_located(locator))
         return elemento.text
+
+    @allure.step("Scroll arriba")
+    def scroll_arriba(self):
+        actions = ActionChains(self.driver)
+        actions.send_keys(Keys.HOME).perform()

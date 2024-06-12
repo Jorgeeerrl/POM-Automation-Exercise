@@ -88,3 +88,9 @@ class PageCarrito(PageBase):
         nombre_producto = self.get_nombres_productos_carrito()[0]
         boton_delete.click()
         allure.attach(f"Producto borrado: {nombre_producto}", name="Producto Borrado")
+
+    @allure.step("Comprobar carrito vacío")
+    def carrito_vacio(self):
+        vacio_visible = self.wait.until(EC.visibility_of_element_located(self.CARRITO_VACIO))
+        allure.attach(f"Carrito Vacío: {vacio_visible}", name="Comprobar Carrito Vacío")
+        self.screenshot("Carrito Vacío")

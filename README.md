@@ -74,33 +74,29 @@ POM_Automation_Exercise/
 
 <details>
   <summary><strong>✅Test Case 1: Register User</strong></summary>
-
 &nbsp;
 
-  <blockquote>
-    <ol>
-      <li>Launch browser</li>
-      <li>Navigate to url 'http://automationexercise.com'</li>
-      <li>Verify that home page is visible successfully</li>
-      <li>Click on 'Signup / Login' button</li>
-      <li>Verify 'New User Signup!' is visible</li>
-      <li>Enter name and email address</li>
-      <li>Click 'Signup' button</li>
-      <li>Verify that 'ENTER ACCOUNT INFORMATION' is visible</li>
-      <li>Fill details: Title, Name, Email, Password, Date of birth</li>
-      <li>Select checkbox 'Sign up for our newsletter!'</li>
-      <li>Select checkbox 'Receive special offers from our partners!'</li>
-      <li>Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number</li>
-      <li>Click 'Create Account button'</li>
-      <li>Verify that 'ACCOUNT CREATED!' is visible</li>
-      <li>Click 'Continue' button</li>
-      <li>Verify that 'Logged in as username' is visible</li>
-      <li>Click 'Delete Account' button</li>
-      <li>Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button</li>
-    </ol>
-  </blockquote>
-</details>
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3.Verify that home page is visible successfully
+4. Click on 'Signup / Login' button
+5. Verify 'New User Signup!' is visible
+6. Enter name and email address
+7. Click 'Signup' button
+8.Verify that 'ENTER ACCOUNT INFORMATION' is visible
+9. Fill details: Title, Name, Email, Password, Date of birth
+10. Select checkbox 'Sign up for our newsletter!'
+11. Select checkbox 'Receive special offers from our partners!'
+12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
+13. Click 'Create Account button'
+14.Verify that 'ACCOUNT CREATED!' is visible
+15. Click 'Continue' button
+16.Verify that 'Logged in as username' is visible
+17. Click 'Delete Account' button
+18.Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
+&nbsp;
+</details>
 
 <details>
   <summary><strong>✅Test Case 2: Login User with correct email and password</strong></summary>
@@ -117,7 +113,13 @@ POM_Automation_Exercise/
 9. Click 'Delete Account' button
 10. Verify that 'ACCOUNT DELETED!' is visible
 
-#### ✅Test Case 3: Login User with incorrect email and password
+&nbsp;
+</details>
+
+<details>
+  <summary><strong>✅Test Case 3: Login User with incorrect email and password</strong></summary>
+&nbsp;
+    
 1. Launch browser
 2. Navigate to url 'http://automationexercise.com'
 3. Verify that home page is visible successfully
@@ -126,6 +128,9 @@ POM_Automation_Exercise/
 6. Enter incorrect email address and password
 7. Click 'login' button
 8. Verify error 'Your email or password is incorrect!' is visible
+
+&nbsp;
+</details>
 
 #### ✅Test Case 4: Logout User
 1. Launch browser

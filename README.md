@@ -566,3 +566,31 @@ POM_Automation_Exercise/
 &nbsp;
 </details>
 
+## Resultados de las Pruebas
+&nbsp;
+
+<div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados1.jpg" style="width: 100%;">
+    </div>
+    <div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados2.jpg" style="width: 100%;">
+    </div>
+    <div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados3.jpg" style="width: 100%;">
+    </div>
+    <div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados4.jpg" style="width: 100%;">
+    </div>
+    <div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados5.jpg" style="width: 100%;">
+    </div>
+    <div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados6.jpg" style="width: 100%;">
+    </div>
+    <div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados7.jpg" style="width: 100%;">
+    </div>
+    <div>
+        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados8.jpg" style="width: 100%;">
+    </div>
+

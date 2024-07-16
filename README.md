@@ -4,13 +4,13 @@
 
 ## Descripción del Proyecto
 
-Este proyecto es una suite de pruebas automatizadas basada en el patrón de diseño Page Object Model (POM). Está diseñado para probar las funcionalidades de una aplicación web, enfocándose en diferentes aspectos como las interacciones de usuario, la navegación de productos, los procesos de pago, entre otros. Las pruebas están escritas en Python y utilizan el framework `pytest` para su ejecución.
+Este proyecto es un conjunto de suites de pruebas automatizadas basado en el patrón de diseño Page Object Model (POM). Está diseñado para probar las funcionalidades de una tienda virtual, enfocándose en diferentes aspectos como las interacciones de usuario, la navegación de productos y los procesos de pago, entre otros. Para su desarrollo he utilizado 'Pycharm' y utilizan `pytest` para su ejecución y `allure` para la visualización de sus resultados.
 
 ## Características Destacables
 
 - **Diseño basado en Page Object Model (POM)**: Cada página web está representada por una clase que encapsula sus elementos e interacciones. De esta manera logramos un código más limpio, así como una buena reutilización y un mejor mantenimiento del mismo.
 - **Cobertura de Pruebas Integral**: Incluye pruebas para acciones de usuario, gestión de productos, proceso de pago, y diversas funcionalidades del sitio.
-- **Generación de Datos**: Utiliza un generador de datos de prueba que usa la librería Fake bajo un Patrón Singleton asegurando que sólo haya una instancia de la clase Datos durante la ejecución.
+- **Generación de Datos**: Utiliza un generador de datos de prueba que usa la librería 'Fake' bajo un 'Patrón Singleton', asegurando que sólo haya una instancia de la clase Datos durante la ejecución.
 - **Configuración y Utilidades**: Archivos de configuración y utilidades adicionales para facilitar las pruebas.
 - **Resultados de Test**: Utiliza Allure para mostrar y guardar los resultados de las pruebas, con pasos y marcadores según los principales Funcionalidades e Historias de Usuario relacionadas.
 
@@ -60,14 +60,19 @@ POM_Automation_Exercise/
 
 ## Cómo Ejecutar las Pruebas
 
-1. **Instalar Dependencias**: Asegúrate de tener Python y `pytest` instalados.
+1. **Instalar Dependencias**: Las dependencias están en el archivo 'requirements.txt'. Asegúrate de tenerlas instaladas.
     ```sh
-    pip install pytest
+    pip install -r requirements.txt
     ```
 
 2. **Ejecutar las Pruebas**: Navega al directorio del proyecto y ejecuta las pruebas.
     ```sh
-    pytest
+    pytest --alluredir=./allure/resultados/<nombre_archivo_resultados>
+    ```
+    
+3. **Visualizar los resultados de las pruebas**
+    ```sh
+    allure serve ./allure/resultados/<nombre_archivo_resultados>  
     ```
 
 ## Casos de Prueba Cubiertos en los Tests

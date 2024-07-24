@@ -1,10 +1,11 @@
-<img align="center" src="https://www.automationexercise.com/static/images/home/logo.png" width="450" />
-
 # POM Automation Exercise
 
 ## Descripción del Proyecto
 
 Este proyecto es un conjunto de suites de pruebas automatizadas basado en el patrón de diseño Page Object Model (POM). Está diseñado para probar las funcionalidades de una tienda virtual, enfocándose en diferentes aspectos como las interacciones de usuario, la navegación de productos y los procesos de pago, entre otros. Para su desarrollo he utilizado 'Pycharm' y utilizan `pytest` para su ejecución y `allure` para la visualización de sus resultados.
+&nbsp;
+
+<img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/PortadaWeb.jpg" />
 
 ## Características Destacables
 

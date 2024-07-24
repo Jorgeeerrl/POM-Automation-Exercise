@@ -567,30 +567,21 @@ POM_Automation_Exercise/
 </details>
 
 ## Resultados de las Pruebas
-&nbsp;
 
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados1.jpg" style="width: 48%;">
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados2.jpg" style="width: 48%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados3.jpg" style="width: 48%;">
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados4.jpg" style="width: 48%;">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados7.jpg" style="width: 48%;">
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados8.jpg" style="width: 48%;"> 
+</div>
 <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados1.jpg" style="width: 100%;">
-    </div>
-    <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados2.jpg" style="width: 100%;">
-    </div>
-    <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados3.jpg" style="width: 100%;">
-    </div>
-    <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados4.jpg" style="width: 100%;">
-    </div>
-    <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados5.jpg" style="width: 100%;">
-    </div>
-    <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados6.jpg" style="width: 100%;">
-    </div>
-    <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados7.jpg" style="width: 100%;">
-    </div>
-    <div>
-        <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados8.jpg" style="width: 100%;">
-    </div>
-
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados5.jpg" style="width: 48%;">
+  <img src="https://github.com/Jorgeeerrl/POM-Automation-Exercise/blob/main/recursos/Resultados6.jpg" style="width: 48%;">  
+</div>
